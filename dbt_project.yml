@@ -10,6 +10,8 @@ config-version: 2
 profile: 'default'
 vars:
   source_schema: public
+  silver_schema: silver
+  gold_schema: gold
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
@@ -40,3 +42,4 @@ models:
   dbt_lab1_silver:
     dbt_lab1_silver:
       +materialized: view
+      +schema: "{{ var('silver_schema') }}"

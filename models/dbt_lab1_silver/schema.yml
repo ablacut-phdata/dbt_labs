@@ -5,16 +5,7 @@ models:
     - name: int_orders
       description: "A starter dbt model"
       columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: int_products
-      description: "A starter dbt model"
-      columns:
-          - name: id
+          - name: pk_order_key
             description: "The primary key for this table"
             tests:
                 - unique
