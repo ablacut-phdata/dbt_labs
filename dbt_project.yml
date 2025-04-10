@@ -42,4 +42,4 @@ models:
   dbt_lab1_silver:
     dbt_lab1_silver:
       +materialized: view
-      +schema: "{{ var('silver_schema') }}"
+      #+schema: "{{ var('silver_schema') }}"
